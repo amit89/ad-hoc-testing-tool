@@ -1,0 +1,65 @@
+Ad-Hoc Testing Reporting Tool
+Overview
+The Ad-Hoc Testing Reporting Tool is a Python-based desktop utility built using tkinter to assist software testers in managing and reporting exploratory testing sessions. The application allows testers to take notes, categorize them by type, attach screenshots, and generate comprehensive HTML reports at the end of the session.
+
+Key Features
+Session Management: Set session details such as Charter Name and Tester Name.
+Notes and Categorization: Record notes during the session and categorize them as IDEA, PROBLEM, DEFECT, or QUESTION.
+Screenshots: Attach screenshots to the session notes.
+Timers: Set time limits for the session (30 mins or 45 mins) with automatic timeout notifications.
+Draft Saving: Save session data as a draft at any point and continue later.
+HTML Report Generation: Generate a detailed HTML report, which includes all session details, categorized notes, and embedded screenshots.
+Filtering in Reports: Filter notes in the generated report by their type (IDEA, PROBLEM, DEFECT, QUESTION).
+Prerequisites
+Python 3.x
+tkinter (comes bundled with Python on most systems)
+Installation
+Clone the repository or download the files.
+Install dependencies (if any).
+bash
+Copy code
+pip install -r requirements.txt
+How to Run
+Open the terminal or command prompt.
+Navigate to the directory containing the project.
+Run the main application using:
+bash
+Copy code
+python app.py
+This will launch the graphical user interface (GUI) of the application.
+
+Usage
+Starting a Session
+Launch the Application: Once you run the application, a hidden root window will be initialized.
+Set Session Details: Input the Charter Name and Tester Name, then click "Set Charter and Tester" to save this information.
+Note Taking: Record notes and categorize them by selecting the appropriate note type (IDEA, PROBLEM, DEFECT, QUESTION).
+Attaching Screenshots: Attach screenshots by clicking the "SCREENSHOT" button and selecting the desired image.
+Timers: Click either the "30 mins" or "45 mins" button to set a session timer. The timer will update and notify you once the time is up.
+Save as Draft: Save your current session data as a draft by clicking "SAVE AS DRAFT".
+End Session: When you’re done with the session, click "END SESSION" to finalize and generate the HTML report.
+HTML Report
+Once the session ends, an HTML report will be generated and saved as explorer_report.html in the current directory. The report will contain all the notes, screenshots, and filters for viewing specific note types.
+
+Unit Testing
+The application includes unit tests for several components. To run the tests, use the following command:
+
+bash
+Copy code
+python -m unittest discover
+Ensure that you are in the root directory of the project while running this command.
+
+Project Structure
+bash
+Copy code
+|-- app.py                         # Main entry point to run the application
+|-- explorer_details.py             # Manages the explorer details and UI
+|-- session_manager.py              # Manages session data and actions
+|-- report_generator.py             # Generates HTML report from session data
+|-- test_application.py             # Unit tests for the application
+|-- README.md                       # Project documentation
+|-- explorer_report.html            # Generated report after a session ends
+|-- requirements.txt                # Python dependencies (if any)
+Future Enhancements
+Session Resumption: Adding functionality to resume a session from a saved draft.
+Customization: Allow custom time limits for sessions.
+Report Customization: Enhance report formatting and allow more flexible customization of report content.
